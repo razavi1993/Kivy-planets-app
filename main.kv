@@ -1,0 +1,39 @@
+<MyLayout>:
+	orientation: "vertical"
+
+	TextInput:
+		id: planet
+		hint_text: "Planet Name"
+		font_size: 28
+		color: 0,0,0,1
+		pos_hint: {'center_x': .45, 'center_y': .9}
+		size_hint: .6,.075
+
+	Button:
+		id: show
+		text: "Show"
+		font_size: 28
+		color: 0,0,0,1
+		pos_hint: {'center_x': .3, 'center_y': .8}
+		size_hint: .3,.075
+		on_press: root.show_planet()
+
+	Button:
+		id: remove
+		text: "Remove"
+		font_size: 28
+		color: 0,0,0,1
+		pos_hint: {'center_x': .6, 'center_y': .8}
+		size_hint: .3,.075
+		on_press: root.remove_plot()
+
+	Label:
+		id: error
+		text: ""
+		color: 0,0,0,1
+		pos_hint: {'center_x': .45, 'center_y': .7}
+		size_hint: .3,.075
+
+	FloatLayout:
+		id: show_plot
+		orientation: 'vertical'
